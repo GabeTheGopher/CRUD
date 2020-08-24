@@ -113,7 +113,7 @@ public class LataDAO {
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
         try {
-            stmt = con.prepareStatement("UPDATE tbusuario SET marca =  ?, volume =  ?, ano =  ?, pais = ?, altura = ?, diametro = ?, descricao = ? WHERE  id =  ?");
+            stmt = con.prepareStatement("UPDATE tblata SET marca =  ?, volume =  ?, ano =  ?, pais = ?, altura = ?, diametro = ?, descricao = ? WHERE  id =  ?");
             stmt.setString(1, l.getMarca());
             stmt.setDouble(2, l.getVolume());
             stmt.setInt(3, l.getAno());

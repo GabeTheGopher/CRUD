@@ -23,6 +23,7 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
