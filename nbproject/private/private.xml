@@ -4,15 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/view/FrmPrincipal.java</file>
-            <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/dao/LataDAO.java</file>
             <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/view/FrmLogin.java</file>
             <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/classes/Acesso.java</file>
-            <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/view/FrmConsultaUsu.java</file>
             <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/view/FrmCadastroUsu.java</file>
             <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/view/FrmCadadastroLata.java</file>
             <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/view/FrmConsultaLata.java</file>
             <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/dao/ConnectionFactory.java</file>
-            <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/dao/AcessoDAO.java</file>
+            <file>file:/C:/Users/glope/Documents/NetBeansProjects/AvaliacaoTri/src/lata/classes/Lata.java</file>
         </group>
     </open-files>
 </project-private>

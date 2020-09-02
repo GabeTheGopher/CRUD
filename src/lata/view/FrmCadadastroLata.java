@@ -65,7 +65,7 @@ public class FrmCadadastroLata extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Reem Kufi", 0, 24)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\glope\\Desktop\\Pandemia\\Imagens\\tb-pode.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tb-pode.png"))); // NOI18N
         jLabel1.setText("Cadastro da Lata");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N

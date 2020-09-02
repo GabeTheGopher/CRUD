@@ -135,7 +135,7 @@ public class FrmConsultaLata extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tbLata);
 
         jLabel1.setFont(new java.awt.Font("Reem Kufi", 0, 36)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\glope\\Desktop\\Pandemia\\Imagens\\tb-pode.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tb-pode.png"))); // NOI18N
         jLabel1.setText("Consulta de Latas");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -188,7 +188,7 @@ public class FrmConsultaLata extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ações", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Noto Serif Light", 0, 14))); // NOI18N
 
         btnExcluir.setBackground(new java.awt.Color(255, 255, 255));
-        btnExcluir.setIcon(new javax.swing.ImageIcon("C:\\Users\\glope\\Desktop\\Pandemia\\Imagens\\lixo (1).png")); // NOI18N
+        btnExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pin.png"))); // NOI18N
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExcluirActionPerformed(evt);
@@ -196,7 +196,7 @@ public class FrmConsultaLata extends javax.swing.JFrame {
         });
 
         btnEditar.setBackground(new java.awt.Color(255, 255, 255));
-        btnEditar.setIcon(new javax.swing.ImageIcon("C:\\Users\\glope\\Desktop\\Pandemia\\Imagens\\editar.png")); // NOI18N
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/edit.png"))); // NOI18N
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);

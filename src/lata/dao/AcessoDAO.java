@@ -18,7 +18,7 @@ import lata.classes.Acesso;
 
 /**
  *
- * @author glope
+ * @author Gabriel Lopes
  */
 public class AcessoDAO {
 

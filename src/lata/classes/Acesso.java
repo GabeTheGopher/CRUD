@@ -1,6 +1,8 @@
 package lata.classes;
 
 import java.sql.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 /**
  *
  * @author Gabriel Lopes
@@ -82,6 +84,35 @@ public class Acesso {
        }
        return numero;
     }
+    
+    public boolean validacaoDoEmail(String email){
+        boolean status = false;
+        
+        String padrao = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+        
+        Pattern pattern = Pattern.compile(padrao);
+        Matcher matcher = pattern.matcher(email);
+        
+        if(matcher.matches()){
+            status = true;
+        }
+        return status;
+    }
+    
+    public boolean validacaoSenha (String senha){
+        boolean status = false;
+        
+        String padrao = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
+        
+        Pattern pattern = Pattern.compile(padrao);
+        Matcher matcher = pattern.matcher(senha);
+        
+        if(matcher.matches()){
+            status = true;
+        }
+        return status;
+    }
+    
     public String toString() {
         return "Usuario{" + "id=" + id + ", nome=" + nome + ", sexo=" + sexo + ", dataAni=" + dataAni + ", celular=" + celular + ", senha=" + senha + '}';
     }    

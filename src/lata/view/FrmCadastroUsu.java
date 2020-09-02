@@ -24,7 +24,14 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
     
-
+    public String escolherSexo(){
+        if(radioMasculino.isSelected()){
+            return "Masculino";
+        }else{
+            return "Feminino";
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,13 +41,13 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtSexo = new javax.swing.JTextField();
         btnSalvar = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
         txtDataAni = new javax.swing.JFormattedTextField();
@@ -53,6 +60,8 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         txtSenha = new javax.swing.JPasswordField();
         txtConfirmarSenha = new javax.swing.JPasswordField();
+        radioMasculino = new javax.swing.JRadioButton();
+        radioFeminino = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro do Usuário");
@@ -64,7 +73,7 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
         jLabel1.setText("Nome:");
 
         jLabel3.setFont(new java.awt.Font("Reem Kufi", 0, 24)); // NOI18N
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\glope\\Desktop\\Pandemia\\Imagens\\do-utilizador (1).png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/do-utilizador (1).png"))); // NOI18N
         jLabel3.setText("Cadastro do Cliente");
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -75,12 +84,6 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Data de Nascimento:");
-
-        txtSexo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtSexoActionPerformed(evt);
-            }
-        });
 
         btnSalvar.setBackground(new java.awt.Color(0, 0, 0));
         btnSalvar.setFont(new java.awt.Font("Source Sans Pro Black", 0, 16)); // NOI18N
@@ -142,6 +145,15 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("Confirmar Senha:");
 
+        radioMasculino.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(radioMasculino);
+        radioMasculino.setSelected(true);
+        radioMasculino.setText("Masculino");
+
+        radioFeminino.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(radioFeminino);
+        radioFeminino.setText("Feminino");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -150,14 +162,6 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtNome, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel2)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel6)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -169,7 +173,18 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtDataAni, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtDataAni, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(radioMasculino)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(radioFeminino))
+                            .addComponent(txtNome))))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -203,10 +218,11 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel1)
                                 .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
+                            .addGap(17, 17, 17)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel2)
-                                .addComponent(txtSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(radioMasculino)
+                                .addComponent(radioFeminino))
                             .addGap(18, 18, 18)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel4)
@@ -251,10 +267,6 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSexoActionPerformed
-
     private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtEmailActionPerformed
@@ -264,36 +276,46 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDataAniActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
-    txtNome.setText("");
-    txtSexo.setText("");
-    txtDataAni.setText("");
-    txtCelular.setText("");
-    txtEmail.setText("");
-    txtSenha.setText("");
-    txtConfirmarSenha.setText("");
+        txtNome.setText("");
+        txtDataAni.setText("");
+        txtCelular.setText("");
+        txtEmail.setText("");
+        txtSenha.setText("");
+        txtConfirmarSenha.setText("");
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-         AcessoDAO dao = null;
-        
-    if(txtSenha.getText().equals(txtConfirmarSenha.getText())){
-         try {
-            dao = new AcessoDAO();
-            Acesso u = new Acesso();
-            u.setNome(txtNome.getText());
-            u.setSexo(txtSexo.getText());
-            u.setDataAni(u.formatarData(txtDataAni.getText()));
-            u.setCelular(u.formatarNumero(txtCelular.getText()));
-            u.setEmail(txtEmail.getText());
-            u.setSenha(txtSenha.getText());
-            dao.create(u);
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage());
+        AcessoDAO dao = null;
+
+        if (txtSenha.getText().equals(txtConfirmarSenha.getText())) {
+            try {
+                dao = new AcessoDAO();
+                Acesso u = new Acesso();
+                boolean statusEmail = u.validacaoDoEmail(txtEmail.getText());
+                boolean statusSenha = u.validacaoSenha(txtSenha.getText());
+                if (statusEmail == true) {
+                    if (statusSenha == true) {
+                        u.setNome(txtNome.getText());
+                        u.setSexo(escolherSexo());
+                        u.setDataAni(u.formatarData(txtDataAni.getText()));
+                        u.setCelular(u.formatarNumero(txtCelular.getText()));
+                        u.setEmail(txtEmail.getText());
+                        u.setSenha(txtSenha.getText());
+                        dao.create(u);
+                    }else{
+                        JOptionPane.showMessageDialog(null, "A senha não se encaixa nos requisitos do programa, para se encaixar digite uma senha que: \n \n Tenha pelo menos uma letra. \n tenha pelo menos um número. \n tenha pelo menos 8 caracteres.");
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Email inválido!");
+                }
+
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, ex.getMessage());
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "As senhas informadas não coincidem");
         }
-    }else{
-        JOptionPane.showMessageDialog(null, "As senhas informadas não coincidem");
-    }
-    
+
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void txtCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCelularActionPerformed
@@ -338,6 +360,7 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnSalvar;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -348,12 +371,13 @@ public class FrmCadastroUsu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JRadioButton radioFeminino;
+    private javax.swing.JRadioButton radioMasculino;
     private javax.swing.JFormattedTextField txtCelular;
     private javax.swing.JPasswordField txtConfirmarSenha;
     private javax.swing.JFormattedTextField txtDataAni;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNome;
     private javax.swing.JPasswordField txtSenha;
-    private javax.swing.JTextField txtSexo;
     // End of variables declaration//GEN-END:variables
 }

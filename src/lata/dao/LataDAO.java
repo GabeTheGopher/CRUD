@@ -39,7 +39,7 @@ public class LataDAO {
 
             stmt.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Usuário Salvo com sucesso!");
+            JOptionPane.showMessageDialog(null, "Lata salva com sucesso!");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
         } finally {
