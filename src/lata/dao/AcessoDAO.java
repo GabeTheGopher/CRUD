@@ -142,7 +142,7 @@ public class AcessoDAO {
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
         try {
-            stmt = con.prepareStatement( "UPDATE tbusuario SET nome =  ?, sexo =  ?, dataAni =  ?, celular = ?, email = ?, senha = ? WHERE  id =  ?");
+            stmt = con.prepareStatement( "UPDATE tbacesso SET nome =  ?, sexo =  ?, dataAni =  ?, celular = ?, email = ?, senha = ? WHERE  id =  ?");
             stmt.setString(1, a.getNome());
             stmt.setString(2, a.getSexo());
             stmt.setString(3, a.getDataAni());

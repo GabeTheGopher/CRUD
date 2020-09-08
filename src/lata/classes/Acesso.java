@@ -76,6 +76,11 @@ public class Acesso {
         String [] dataFormatada = data.split("/");
         return dataFormatada[2] +"-" +dataFormatada[1] +"-"+dataFormatada[0];
     }
+    
+    public String desformatarData(String data){
+        String [] dataFormatada = data.split("-");
+        return dataFormatada[2] +dataFormatada[1] +dataFormatada[0];
+    }
 
     public String formatarNumero(String numero){
        String [] caracteres = {"-", " "};
